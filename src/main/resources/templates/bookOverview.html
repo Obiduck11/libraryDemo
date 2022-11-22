@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Overzicht van boeken</title>
+    <link rel="stylesheet" type="text/css" href="/css/library.css">
 </head>
 <body>
 <h1>Overzicht van boeken</h1>
@@ -11,12 +12,10 @@
         <th>Titel</th>
         <th>Auteur</th>
     </tr>
-    <tr th:each = "book : ${books}">
+    <tr th:each = "book : ${allBooks}">
         <td th:text = "${book.title}"></td>
         <td th:text = "${book.author}"></td>
-
     </tr>
-
 </table>
 
 </body>

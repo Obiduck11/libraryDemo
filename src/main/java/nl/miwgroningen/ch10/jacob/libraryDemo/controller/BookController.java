@@ -21,7 +21,7 @@ public class BookController {
                 "userLibrary", "userLibraryPW");
         dBaccess.openConnection();
         BookDAO bookDAO = new BookDAO(dBaccess);
-        model.addAttribute("books", bookDAO.getAllBooks());
+        model.addAttribute("allBooks", bookDAO.getAllBooks());
         dBaccess.closeConnection();
 
         return "bookOverview";

@@ -1,6 +1,5 @@
 package nl.miwgroningen.ch10.jacob.libraryDemo.database;
 
-import com.mysql.cj.protocol.Resultset;
 import nl.miwgroningen.ch10.jacob.libraryDemo.model.Book;
 
 import java.sql.ResultSet;
