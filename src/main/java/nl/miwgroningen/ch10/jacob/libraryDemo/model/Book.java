@@ -3,7 +3,7 @@ package nl.miwgroningen.ch10.jacob.libraryDemo.model;
 /**
  * Author: Jacob Visser
  * <p>
- * Dit is wat het programma doet.
+ * hier komen gegevens over boeken.
  */
 
 public class Book {
