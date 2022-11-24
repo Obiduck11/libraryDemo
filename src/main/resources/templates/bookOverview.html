@@ -9,14 +9,23 @@
 <h1>Overzicht van boeken</h1>
 <table>
     <tr>
+        <th>Id</th>
         <th>Titel</th>
         <th>Auteur</th>
     </tr>
     <tr th:each = "book : ${allBooks}">
+        <td> <a th:href = "@{/books/details/{bookId}(bookId = ${book.bookId})}" th:text = "${book.bookId}">Titel</a></td>
         <td th:text = "${book.title}"></td>
         <td th:text = "${book.author}"></td>
+        <td><a th:href="@{/books/edit/{bookId}(bookId=${book.bookId})}">Edit</a></td>
+        <td><a th:href="@{/books/delete/{bookId}(bookId=${book.bookId})}">Delete</a></td>
+        <td>
+            <span th:text="${book.numberOfAvailableCopies}"></span>
+            <a th:href="@{/copy/buy/{bookId}(bookId=${book.bookId})}">buy</a>
+        </td>
+
     </tr>
 </table>
-
+<a th:href="@{/books/new}">Maak nieuw boek</a>
 </body>
 </html>
